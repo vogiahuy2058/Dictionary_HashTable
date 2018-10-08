@@ -1,0 +1,9 @@
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\bin\Debug\Dictonary.exe.config
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\bin\Debug\Dictonary.exe
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\bin\Debug\Dictonary.pdb
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.csprojResolveAssemblyReference.cache
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.Properties.Resources.resources
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.csproj.GenerateResource.Cache
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.csproj.CoreCompileInputs.cache
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.exe
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.pdb
