@@ -31,6 +31,7 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.btnInfo = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -75,6 +76,7 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.Black;
+            this.pnlMenu.Controls.Add(this.btnSearch);
             this.pnlMenu.Controls.Add(this.btnDelete);
             this.pnlMenu.Controls.Add(this.btnEdit);
             this.pnlMenu.Controls.Add(this.btnAdd);
@@ -84,6 +86,24 @@
             this.pnlMenu.Size = new System.Drawing.Size(43, 508);
             this.pnlMenu.TabIndex = 15;
             this.pnlMenu.Leave += new System.EventHandler(this.pnlMenu_Leave);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearch.FlatAppearance.BorderSize = 0;
+            this.btnSearch.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
+            this.btnSearch.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btnSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSearch.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.btnSearch.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSearch.Image = global::Dictonary.Properties.Resources.Find_24;
+            this.btnSearch.Location = new System.Drawing.Point(-258, 172);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(559, 55);
+            this.btnSearch.TabIndex = 5;
+            this.btnSearch.Text = "                                         Search a word";
+            this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnDelete
             // 
@@ -191,5 +211,6 @@
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnSearch;
     }
 }

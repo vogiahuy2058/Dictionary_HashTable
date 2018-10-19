@@ -81,7 +81,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(444, 90);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Coded by: Tran Tan Quy\r\n                  Vo Minh Huy\r\n";
+            this.label2.Text = "Coded by: Tran Tan Quy\r\n                  Vo Gia Huy\r\n";
             // 
             // btnClose
             // 

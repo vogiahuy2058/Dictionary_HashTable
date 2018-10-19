@@ -7,25 +7,79 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 //Trần Tấn Quý
 namespace Dictonary
 {
     public partial class frmMain : Form
     {
-        #region Menu designed by Trần Tấn Quý
+        public BangBam BB;
         ucAddWord ucAdd = new ucAddWord();
         ucEditWord ucEdit = new ucEditWord();
         ucDeleteWord ucDelete = new ucDeleteWord();
+        //ucSearch ucSearch = new ucSearch(this);
         public frmMain()
         {
             InitializeComponent();
             ucAdd.Visible = false;
             ucEdit.Visible = false;
             ucDelete.Visible = false;
-
-
+            //ucSearch.Visible = false;
+            BB = new BangBam();
+            LoadDataFile();
+           
         }
         
+       
+        #region Load Data by Trần Tấn Quý
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            pnlMenu.BringToFront();
+            pnlMenu.BackColor = System.Drawing.Color.Transparent;
+            
+        }
+        int TotalLines(string filePath)
+        {
+            using (StreamReader r = new StreamReader(filePath))
+            {
+                int i = 0;
+                while (r.ReadLine() != null) { i++; }
+                return i;
+            }
+        }
+        public void LoadDataFile()
+        {
+            var file = new FileStream(@"D:\CTDL\FinalProject\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\input.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            var sr = new StreamReader(file);
+
+            string s;
+
+            for (int i = 0; i < TotalLines(@"D:\CTDL\FinalProject\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\input.txt"); i++)
+            {
+                string name = null, meaning = null;
+                s = sr.ReadLine();
+                int j = 0;
+                while (s[j] != '@')
+                {
+                    name += s[j];
+                    j++;
+                }
+                j++;
+                while (j < s.Length)
+                {
+                    meaning += s[j];
+                    j++;
+                }
+                Word wd = new Word(name, meaning);
+
+
+                BB.Add(wd);
+            }
+            file.Close();
+            sr.Close();
+        }
+        #endregion
+        #region Menu designed by Trần Tấn Quý
         protected override CreateParams CreateParams
         {
             //hàm tối ưu tốc độ load (source: Internet)
@@ -37,12 +91,7 @@ namespace Dictonary
                 return cp;
             }
         }
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-            pnlMenu.BringToFront();
-            pnlMenu.BackColor = System.Drawing.Color.Transparent;
-        }
-
+        
         private void btnClose_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -93,13 +142,14 @@ namespace Dictonary
             //hàm con trỏ, được sử dụng cho các usercontrol
             btnAdd.BackColor = System.Drawing.Color.Transparent;
             btnEdit.BackColor = System.Drawing.Color.Transparent;
-            
+            btnDelete.BackColor = System.Drawing.Color.Transparent;
+            btnSearch.BackColor = System.Drawing.Color.Transparent;
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             this.Controls.Add(ucAdd);
             ucAdd.Location = new Point(65, 46);
-            // ẩn/hiện user control khách
+            // ẩn/hiện user control
             if (ucAdd.Visible == true)
             {
                 ucAdd.Visible = false;
@@ -114,6 +164,7 @@ namespace Dictonary
             //ẩn con trỏ của các chức năng không hoạt động
             btnEdit.BackColor = System.Drawing.Color.Transparent;
             btnDelete.BackColor = System.Drawing.Color.Transparent;
+            btnSearch.BackColor = System.Drawing.Color.Transparent;
             //ẩn Slide Menu nếu đang bật
             if (pnlMenu.Height == 508 && pnlMenu.Width == 264)
             {
@@ -124,13 +175,14 @@ namespace Dictonary
             //ẩn các user control khác
             ucEdit.Visible = false;
             ucDelete.Visible = false;
+            //ucSearch.Visible = false
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
             this.Controls.Add(ucEdit);
             ucEdit.Location = new Point(65, 46);
-            // ẩn/hiện user control khách
+            // ẩn/hiện user control
             if (ucEdit.Visible == true)
             {
                 ucEdit.Visible = false;
@@ -145,6 +197,7 @@ namespace Dictonary
             //ẩn con trỏ của các chức năng không hoạt động
             btnAdd.BackColor = System.Drawing.Color.Transparent;
             btnDelete.BackColor = System.Drawing.Color.Transparent;
+            btnSearch.BackColor = System.Drawing.Color.Transparent;
             //ẩn Slide Menu nếu đang bật
             if (pnlMenu.Height == 508 && pnlMenu.Width == 264)
             {
@@ -155,6 +208,7 @@ namespace Dictonary
             //ẩn các user control khác
             ucAdd.Visible = false;
             ucDelete.Visible = false;
+            //ucSearch.Visible = false;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -176,6 +230,7 @@ namespace Dictonary
             //ẩn con trỏ của các chức năng không hoạt động
             btnAdd.BackColor = System.Drawing.Color.Transparent;
             btnEdit.BackColor = System.Drawing.Color.Transparent;
+            btnSearch.BackColor = System.Drawing.Color.Transparent;
             //ẩn Slide Menu nếu đang bật
             if (pnlMenu.Height == 508 && pnlMenu.Width == 264)
             {
@@ -186,6 +241,7 @@ namespace Dictonary
             //ẩn các user control khác
             ucAdd.Visible = false;
             ucEdit.Visible = false;
+            //ucSearch.Visible = false;
         }
         //start location 65,46 ; size 683,444
         private void btnInfo_Click(object sender, EventArgs e)
@@ -193,8 +249,44 @@ namespace Dictonary
             Form frm = new frmInfo();
             frm.Show();
         }
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            ucSearch ucSearch = new ucSearch(this);
+            this.Controls.Add(ucSearch);
+            ucSearch.Location = new Point(65, 46);
+            ucSearch.Visible = false;
+            // ẩn/hiện user control
+            if (ucSearch.Visible == true)
+            {
+                ucSearch.Visible = false;
+                btnSearch.BackColor = System.Drawing.Color.Transparent;
+            }
+            else
+            {
+                ucSearch.Visible = true;
+                btnSearch.BackColor = System.Drawing.Color.Purple;
+            }
+
+
+            //ẩn con trỏ của các chức năng không hoạt động
+            btnAdd.BackColor = System.Drawing.Color.Transparent;
+            btnDelete.BackColor = System.Drawing.Color.Transparent;
+            btnEdit.BackColor = System.Drawing.Color.Transparent;
+            //ẩn Slide Menu nếu đang bật
+            if (pnlMenu.Height == 508 && pnlMenu.Width == 264)
+            {
+                pnlMenu.Height = 508;
+                pnlMenu.Width = 43;
+                pnlMenu.BackColor = System.Drawing.Color.Transparent;
+            }
+            //ẩn các user control khác
+            ucAdd.Visible = false;
+            ucDelete.Visible = false;
+            ucEdit.Visible = false;
+        }
+
         #endregion
 
-
+        
     }
 }

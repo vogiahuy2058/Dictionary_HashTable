@@ -87,6 +87,12 @@
     <Compile Include="ucEditWord.Designer.cs">
       <DependentUpon>ucEditWord.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSearch.Designer.cs">
+      <DependentUpon>ucSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Word.cs" />
     <EmbeddedResource Include="frmInfo.resx">
       <DependentUpon>frmInfo.cs</DependentUpon>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucEditWord.resx">
       <DependentUpon>ucEditWord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSearch.resx">
+      <DependentUpon>ucSearch.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -173,6 +182,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-info-500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find 24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close 24 purple1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Find 241.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

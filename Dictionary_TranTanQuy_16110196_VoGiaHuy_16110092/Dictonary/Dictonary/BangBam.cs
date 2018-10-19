@@ -37,9 +37,11 @@ namespace Dictonary
             char c = GetFirstChar(s);
             int hash = Bam(c);
             Node p = new Node();
+            p = Table[hash].Head;
             while (p != null)
             {
-                if (p.GetWord().Name == s) return true;
+                if (p.GetWord().Name == s)
+                    return true;
                 p = p.pNext;
             }
             return false;
@@ -52,12 +54,16 @@ namespace Dictonary
             string k = null;
             try
             {
-                if (check == false) throw new Exception("This word doesn't exist!");
+                if (check == false)
+                {
+                    throw new Exception("HashTable doesn't have this word");
+                }
                 Node p = new Node();
                 p = Table[hash].Head;
                 while (p != null)
                 {
-                    if (p.GetWord().Name == s) k = p.GetWord().Meaning;
+                    if (p.GetWord().Name == s)
+                        k = p.GetWord().Meaning;
                     p = p.pNext;
                 }
                 return k;
