@@ -121,6 +121,7 @@
             this.btnOK.Size = new System.Drawing.Size(102, 42);
             this.btnOK.TabIndex = 41;
             this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             this.btnOK.MouseEnter += new System.EventHandler(this.btnOK_MouseEnter);
             this.btnOK.MouseLeave += new System.EventHandler(this.btnOK_MouseLeave);
             // 

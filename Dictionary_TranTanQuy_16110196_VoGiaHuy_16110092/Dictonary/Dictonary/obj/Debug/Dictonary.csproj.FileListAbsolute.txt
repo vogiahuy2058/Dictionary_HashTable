@@ -22,3 +22,10 @@ D:\CTDL\FinalProject\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHu
 D:\CTDL\FinalProject\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.ucDeleteWord.resources
 D:\CTDL\FinalProject\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.frmInfo.resources
 D:\CTDL\FinalProject\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.ucSearch.resources
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.frmInfo.resources
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.frmMain.resources
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.frmWelcome.resources
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.ucAddWord.resources
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.ucDeleteWord.resources
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.ucEditWord.resources
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.ucSearch.resources
