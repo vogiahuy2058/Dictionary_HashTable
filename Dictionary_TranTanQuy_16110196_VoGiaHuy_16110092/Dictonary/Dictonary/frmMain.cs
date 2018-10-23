@@ -17,69 +17,23 @@ namespace Dictonary
         ucAddWord ucAdd = new ucAddWord();
         ucEditWord ucEdit = new ucEditWord();
         ucDeleteWord ucDelete = new ucDeleteWord();
-        //ucSearch ucSearch = new ucSearch(this);
+        ucSearch ucSearch = new ucSearch();
         public frmMain()
         {
             InitializeComponent();
             ucAdd.Visible = false;
             ucEdit.Visible = false;
             ucDelete.Visible = false;
-            //ucSearch.Visible = false;
-            BB = new BangBam();
-            LoadDataFile();
+            ucSearch.Visible = false;
            
         }
-        
-       
-        #region Load Data by Trần Tấn Quý
+        #region Menu designed by Trần Tấn Quý
         private void frmMain_Load(object sender, EventArgs e)
         {
             pnlMenu.BringToFront();
             pnlMenu.BackColor = System.Drawing.Color.Transparent;
-            
+
         }
-        int TotalLines(string filePath)
-        {
-            using (StreamReader r = new StreamReader(filePath))
-            {
-                int i = 0;
-                while (r.ReadLine() != null) { i++; }
-                return i;
-            }
-        }
-        public void LoadDataFile()
-        {
-            var file = new FileStream(@"D:\CTDL\FinalProject\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\input.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-            var sr = new StreamReader(file);
-
-            string s;
-
-            for (int i = 0; i < TotalLines(@"D:\CTDL\FinalProject\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\input.txt"); i++)
-            {
-                string name = null, meaning = null;
-                s = sr.ReadLine();
-                int j = 0;
-                while (s[j] != '@')
-                {
-                    name += s[j];
-                    j++;
-                }
-                j++;
-                while (j < s.Length)
-                {
-                    meaning += s[j];
-                    j++;
-                }
-                Word wd = new Word(name, meaning);
-
-
-                BB.Add(wd);
-            }
-            file.Close();
-            sr.Close();
-        }
-        #endregion
-        #region Menu designed by Trần Tấn Quý
         protected override CreateParams CreateParams
         {
             //hàm tối ưu tốc độ load (source: Internet)
@@ -175,7 +129,7 @@ namespace Dictonary
             //ẩn các user control khác
             ucEdit.Visible = false;
             ucDelete.Visible = false;
-            //ucSearch.Visible = false
+            ucSearch.Visible = false;
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -208,7 +162,7 @@ namespace Dictonary
             //ẩn các user control khác
             ucAdd.Visible = false;
             ucDelete.Visible = false;
-            //ucSearch.Visible = false;
+            ucSearch.Visible = false;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
@@ -241,7 +195,7 @@ namespace Dictonary
             //ẩn các user control khác
             ucAdd.Visible = false;
             ucEdit.Visible = false;
-            //ucSearch.Visible = false;
+            ucSearch.Visible = false;
         }
         //start location 65,46 ; size 683,444
         private void btnInfo_Click(object sender, EventArgs e)
@@ -251,10 +205,10 @@ namespace Dictonary
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            ucSearch ucSearch = new ucSearch(this);
+           
             this.Controls.Add(ucSearch);
             ucSearch.Location = new Point(65, 46);
-            ucSearch.Visible = false;
+           
             // ẩn/hiện user control
             if (ucSearch.Visible == true)
             {

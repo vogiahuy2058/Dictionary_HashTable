@@ -45,6 +45,7 @@ namespace Dictonary
             this.btnCancel.Image = ((System.Drawing.Image)(Properties.Resources.close_24_purple));
 
         }
+        #region Võ Gia Huy
         int TotalLines(string filePath)
         {
             using (StreamReader r = new StreamReader(filePath))
@@ -56,12 +57,12 @@ namespace Dictonary
         }
         public void LoadDataFile()
         {
-            var file = new FileStream(@"C:\Users\HUY-PC\Desktop\Dictonary1\Dictonary\input.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            var file = new FileStream(@"E:\Words\input.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
             var sr = new StreamReader(file);
 
             string s;
 
-            for (int i = 0; i < TotalLines(@"C:\Users\HUY-PC\Desktop\Dictonary1\Dictonary\input.txt"); i++)
+            for (int i = 0; i < TotalLines(@"E:\Words\input.txt"); i++)
             {
                 string name = null, meaning = null;
                 s = sr.ReadLine();
@@ -101,7 +102,7 @@ namespace Dictonary
                 else
                 {
                     string[] names = new string[] { txtWord.Text + "@" + txtMeaning.Text };
-                    var file = new FileStream(@"C:\Users\HUY-PC\Desktop\Dictonary1\Dictonary\input.txt",
+                    var file = new FileStream(@"E:\Words\input.txt",
                         FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
                     using (StreamWriter sw = new StreamWriter(file))
                     {
@@ -113,13 +114,7 @@ namespace Dictonary
                     BangBam BB;
                     BB = new BangBam();
                     LoadDataFile();
-                    // _frmMainScreen.BB.Add(wd);
-                    //_frmMainScreen.comboBox1.Items.Clear();
-                    //MainScreen.AddComboBox(_frmMainScreen.BB, _frmMainScreen.comboBox1);
-                    //Word wd = new Word(s1, s2);
-                    //_frmMainScreen.BB.Add(wd);
-                    //_frmMainScreen.comboBox1.Items.Clear();
-                    //MainScreen.AddComboBox(_frmMainScreen.BB, _frmMainScreen.comboBox1);
+                   
                     MessageBox.Show("This word has been added", "Congratulation", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                 }
@@ -129,5 +124,7 @@ namespace Dictonary
                 MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        #endregion
+        
     }
 }

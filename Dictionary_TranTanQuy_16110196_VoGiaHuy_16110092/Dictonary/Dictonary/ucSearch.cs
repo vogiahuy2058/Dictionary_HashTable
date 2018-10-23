@@ -7,20 +7,62 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 //Trần Tấn Quý
 namespace Dictonary
 {
     public partial class ucSearch : UserControl
     {
-        private frmMain _Main;
-        public ucSearch(Form Main)
+        public BangBam BB;
+        public ucSearch()
         {
-            _Main = (frmMain)Main;
             InitializeComponent();
-           
-
+            BB= new BangBam();
+            LoadDataFile();
         }
+        #region Load Data 
+        
+        int TotalLines(string filePath)
+        {
+            using (StreamReader r = new StreamReader(filePath))
+            {
+                int i = 0;
+                while (r.ReadLine() != null) { i++; }
+                return i;
+            }
+        }
+        public void LoadDataFile()
+        {
+            var file = new FileStream(@"E:\Words\input.txt", FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+            var sr = new StreamReader(file);
 
+            string s;
+
+            for (int i = 0; i < TotalLines(@"E:\Words\input.txt"); i++)
+            {
+                string name = null, meaning = null;
+                s = sr.ReadLine();
+                int j = 0;
+                while (s[j] != '@')
+                {
+                    name += s[j];
+                    j++;
+                }
+                j++;
+                while (j < s.Length)
+                {
+                    meaning += s[j];
+                    j++;
+                }
+                Word wd = new Word(name, meaning);
+
+
+                BB.Add(wd);
+            }
+            file.Close();
+            sr.Close();
+        }
+        #endregion
         private void txtWord_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13)
@@ -35,11 +77,11 @@ namespace Dictonary
             try
             {
                 if (s1 == "") throw new Exception("Pleaes type something!");
-                bool check = _Main.BB.Search_Check(s1);
+                bool check = BB.Search_Check(s1);
                 if (check == true)//từ tồn tại
                 {
                     lblWordHere.Text = s1;
-                    lblMeaningHere.Text = _Main.BB.Search_Lookup(s1);
+                    lblMeaningHere.Text = BB.Search_Lookup(s1);
                 }
                 else
                 {
