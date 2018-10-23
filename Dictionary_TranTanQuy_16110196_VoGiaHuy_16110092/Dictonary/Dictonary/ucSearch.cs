@@ -63,16 +63,19 @@ namespace Dictonary
             sr.Close();
         }
         #endregion
+        #region Design
         private void txtWord_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == 13)
             {
-                
+                btnFind.Focus();
             }
         }
 
         private void btnFind_Click(object sender, EventArgs e)
         {
+            
+            LoadDataFile();
             string s1 = txtWord.Text;
             try
             {
@@ -117,6 +120,29 @@ namespace Dictonary
 
         }
 
-       
+        private void btnAudio_MouseEnter(object sender, EventArgs e)
+        {
+            this.btnAudio.Image = ((System.Drawing.Image)(Properties.Resources.audo_white));
+
+        }
+
+        private void btnAudio_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnAudio.Image = ((System.Drawing.Image)(Properties.Resources.audio_purple));
+
+        }
+
+        private void btnAudioM_MouseEnter(object sender, EventArgs e)
+        {
+            this.btnAudioM.Image = ((System.Drawing.Image)(Properties.Resources.audo_white));
+
+        }
+
+        private void btnAudioM_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnAudioM.Image = ((System.Drawing.Image)(Properties.Resources.audio_purple));
+
+        }
     }
+    #endregion
 }

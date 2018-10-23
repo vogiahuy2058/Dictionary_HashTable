@@ -136,6 +136,9 @@
   <data name="icons8-checkmark-24" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icons8-checkmark-24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="audio purple" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audio purple.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="background 1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\background 1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -171,5 +174,8 @@
   </data>
   <data name="Find 241" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Find 241.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="audo white" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\audo white.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

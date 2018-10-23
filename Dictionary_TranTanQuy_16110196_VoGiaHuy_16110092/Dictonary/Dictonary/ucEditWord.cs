@@ -16,7 +16,7 @@ namespace Dictonary
         {
             InitializeComponent();
         }
-
+        #region Design
         private void btnOK_MouseEnter(object sender, EventArgs e)
         {
             this.btnOK.Image = ((System.Drawing.Image)(Properties.Resources.icons8_checkmark_24));
@@ -41,9 +41,24 @@ namespace Dictonary
 
         }
 
-        private void txtNewWord_TextChanged(object sender, EventArgs e)
+
+        private void btnClose_MouseEnter(object sender, EventArgs e)
         {
+            this.btnClose.Image = ((System.Drawing.Image)(Properties.Resources.close_24_white));
+        }
+
+        private void btnClose_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnClose.Image = ((System.Drawing.Image)(Properties.Resources.close_24_purple));
 
         }
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+
+        }
+        #endregion
+
+
     }
 }

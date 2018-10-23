@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.lblEdit = new System.Windows.Forms.Label();
-            this.cbEdit = new System.Windows.Forms.ComboBox();
+            this.cbDelete = new System.Windows.Forms.ComboBox();
             this.lblChoose = new System.Windows.Forms.Label();
             this.lblType = new System.Windows.Forms.Label();
             this.txtMeaning = new System.Windows.Forms.TextBox();
             this.lblOr = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOK = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEdit
@@ -50,14 +51,14 @@
             this.lblEdit.TabIndex = 13;
             this.lblEdit.Text = "DELETE YOUR WORD";
             // 
-            // cbEdit
+            // cbDelete
             // 
-            this.cbEdit.Font = new System.Drawing.Font("Arial", 20F);
-            this.cbEdit.FormattingEnabled = true;
-            this.cbEdit.Location = new System.Drawing.Point(273, 133);
-            this.cbEdit.Name = "cbEdit";
-            this.cbEdit.Size = new System.Drawing.Size(374, 40);
-            this.cbEdit.TabIndex = 44;
+            this.cbDelete.Font = new System.Drawing.Font("Arial", 20F);
+            this.cbDelete.FormattingEnabled = true;
+            this.cbDelete.Location = new System.Drawing.Point(273, 133);
+            this.cbDelete.Name = "cbDelete";
+            this.cbDelete.Size = new System.Drawing.Size(374, 40);
+            this.cbDelete.TabIndex = 44;
             // 
             // lblChoose
             // 
@@ -138,17 +139,37 @@
             this.btnOK.MouseEnter += new System.EventHandler(this.btnOK_MouseEnter);
             this.btnOK.MouseLeave += new System.EventHandler(this.btnOK_MouseLeave);
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Transparent;
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnClose.FlatAppearance.BorderSize = 0;
+            this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
+            this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnClose.ForeColor = System.Drawing.Color.Transparent;
+            this.btnClose.Image = global::Dictonary.Properties.Resources.close_24_purple1;
+            this.btnClose.Location = new System.Drawing.Point(621, 0);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(62, 27);
+            this.btnClose.TabIndex = 50;
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            this.btnClose.MouseEnter += new System.EventHandler(this.btnClose_MouseEnter);
+            this.btnClose.MouseLeave += new System.EventHandler(this.btnClose_MouseLeave);
+            // 
             // ucDeleteWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.lblOr);
             this.Controls.Add(this.txtMeaning);
             this.Controls.Add(this.lblType);
-            this.Controls.Add(this.cbEdit);
+            this.Controls.Add(this.cbDelete);
             this.Controls.Add(this.lblChoose);
             this.Controls.Add(this.lblEdit);
             this.Name = "ucDeleteWord";
@@ -161,12 +182,13 @@
         #endregion
 
         private System.Windows.Forms.Label lblEdit;
-        private System.Windows.Forms.ComboBox cbEdit;
+        private System.Windows.Forms.ComboBox cbDelete;
         private System.Windows.Forms.Label lblChoose;
         private System.Windows.Forms.Label lblType;
         private System.Windows.Forms.TextBox txtMeaning;
         private System.Windows.Forms.Label lblOr;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnClose;
     }
 }

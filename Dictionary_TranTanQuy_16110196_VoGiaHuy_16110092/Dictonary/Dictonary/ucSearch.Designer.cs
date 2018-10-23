@@ -39,6 +39,8 @@
             this.lblM = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
+            this.btnAudioM = new System.Windows.Forms.Button();
+            this.btnAudio = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +111,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.LightGray;
+            this.panel1.Controls.Add(this.btnAudio);
             this.panel1.Controls.Add(this.lblWordHere);
             this.panel1.Controls.Add(this.lblW);
             this.panel1.Location = new System.Drawing.Point(40, 173);
@@ -142,6 +145,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.LightGray;
+            this.panel2.Controls.Add(this.btnAudioM);
             this.panel2.Controls.Add(this.lblMeaningHere);
             this.panel2.Controls.Add(this.lblM);
             this.panel2.Location = new System.Drawing.Point(354, 173);
@@ -209,6 +213,40 @@
             this.btnFind.UseVisualStyleBackColor = false;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
+            // btnAudioM
+            // 
+            this.btnAudioM.BackColor = System.Drawing.Color.LightGray;
+            this.btnAudioM.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnAudioM.FlatAppearance.BorderSize = 0;
+            this.btnAudioM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
+            this.btnAudioM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btnAudioM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAudioM.Image = global::Dictonary.Properties.Resources.audio_purple;
+            this.btnAudioM.Location = new System.Drawing.Point(247, 0);
+            this.btnAudioM.Name = "btnAudioM";
+            this.btnAudioM.Size = new System.Drawing.Size(44, 38);
+            this.btnAudioM.TabIndex = 46;
+            this.btnAudioM.UseVisualStyleBackColor = false;
+            this.btnAudioM.MouseEnter += new System.EventHandler(this.btnAudioM_MouseEnter);
+            this.btnAudioM.MouseLeave += new System.EventHandler(this.btnAudioM_MouseLeave);
+            // 
+            // btnAudio
+            // 
+            this.btnAudio.BackColor = System.Drawing.Color.LightGray;
+            this.btnAudio.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnAudio.FlatAppearance.BorderSize = 0;
+            this.btnAudio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
+            this.btnAudio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btnAudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAudio.Image = global::Dictonary.Properties.Resources.audio_purple;
+            this.btnAudio.Location = new System.Drawing.Point(247, 0);
+            this.btnAudio.Name = "btnAudio";
+            this.btnAudio.Size = new System.Drawing.Size(44, 38);
+            this.btnAudio.TabIndex = 45;
+            this.btnAudio.UseVisualStyleBackColor = false;
+            this.btnAudio.MouseEnter += new System.EventHandler(this.btnAudio_MouseEnter);
+            this.btnAudio.MouseLeave += new System.EventHandler(this.btnAudio_MouseLeave);
+            // 
             // ucSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -246,5 +284,7 @@
         private System.Windows.Forms.Label lblMeaningHere;
         private System.Windows.Forms.Button btnFind;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnAudio;
+        private System.Windows.Forms.Button btnAudioM;
     }
 }
