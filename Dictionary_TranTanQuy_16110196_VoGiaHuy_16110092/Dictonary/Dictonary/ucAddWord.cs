@@ -106,7 +106,7 @@ namespace Dictonary
         {
             BB = new BangBam();
             LoadDataFile();
-            string s1 = txtWord.Text;
+            string s1 = txtWord.Text.Trim();
             string s2 = txtMeaning.Text;
 
             try
@@ -119,7 +119,7 @@ namespace Dictonary
                         MessageBoxIcon.Warning);
                 else
                 {
-                    string[] names = new string[] { txtWord.Text + "@" + txtMeaning.Text };
+                    string[] names = new string[] { txtWord.Text.Trim() + "@" + txtMeaning.Text };
                     var file = new FileStream(@"E:\Words\input.txt",
                         FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
                     using (StreamWriter sw = new StreamWriter(file))

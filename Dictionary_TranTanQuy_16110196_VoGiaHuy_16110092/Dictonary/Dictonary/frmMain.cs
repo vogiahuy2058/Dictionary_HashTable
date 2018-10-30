@@ -163,6 +163,7 @@ namespace Dictonary
             ucAdd.Visible = false;
             ucDelete.Visible = false;
             ucSearch.Visible = false;
+            ucEdit.reset();
         }
 
         private void btnDelete_Click(object sender, EventArgs e)

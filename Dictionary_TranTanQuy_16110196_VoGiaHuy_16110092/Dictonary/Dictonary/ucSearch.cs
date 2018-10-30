@@ -76,7 +76,7 @@ namespace Dictonary
         {
             BB = new BangBam();
             LoadDataFile();
-            string s1 = txtWord.Text;
+            string s1 = txtWord.Text.Trim();
             try
             {
                 if (s1 == "") throw new Exception("Pleaes type something!");

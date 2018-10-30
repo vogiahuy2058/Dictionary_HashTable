@@ -155,12 +155,12 @@ namespace Dictonary
         {
             BB = new BangBam();
             LoadDataFile();
-            string s1 = txtMeaning.Text;
+            string s1 = txtMeaning.Text.Trim();
             if (s1 == "")
             {
                 s1 = "zzzzz";
             }
-            string s3 = cbDelete.Text;
+            string s3 = cbDelete.Text.Trim();
             if (s3 == "")
             {
                 s3 = "cccccc";
@@ -288,5 +288,7 @@ namespace Dictonary
             lblType.Enabled = true;
             lblChoose.Enabled = true;
         }
+
+        
     }
 }

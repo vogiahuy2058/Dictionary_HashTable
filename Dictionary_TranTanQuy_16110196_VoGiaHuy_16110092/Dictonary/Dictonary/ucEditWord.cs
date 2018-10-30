@@ -126,7 +126,12 @@ namespace Dictonary
             }
             sr.Close();
         }
-
+        public void reset()
+        {
+            cbEdit.Items.Clear();
+            LoadDataFile();
+            AddComboBox(BB, cbEdit);
+        }
         private void btnOK_Click(object sender, EventArgs e)
         {
             BB = new BangBam();
@@ -136,7 +141,7 @@ namespace Dictonary
             {
                 s1 = "ccccc";
             }
-            string s2 = txtNewWord.Text;
+            string s2 = txtNewWord.Text.Trim();
             if (s2 == "")
             {
                 s2 = "aaaaa";
@@ -173,10 +178,10 @@ namespace Dictonary
                             sr1.Close();
                             sw2.Close();
                         }
-
+                        BB.RemoveWord(s1);
                         File.Delete(@"E:\Words\input.txt");
                         File.Move(tempFile, @"E:\Words\input.txt");
-                        string[] names = new string[] { txtNewWord.Text + "@" + txtMeaning.Text };
+                        string[] names = new string[] { txtNewWord.Text.Trim() + "@" + txtMeaning.Text };
                         var file = new FileStream(@"E:\Words\input.txt",
                             FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
                         using (StreamWriter sw1 = new StreamWriter(file))
@@ -190,6 +195,8 @@ namespace Dictonary
                         file.Close();
                         MessageBox.Show("Edited succesfully!", "Congratulations", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
+                        Word wd = new Word(s2, s3);
+                        BB.Add(wd);
                         cbEdit.ResetText();
                         txtNewWord.ResetText();
                         txtMeaning.ResetText();

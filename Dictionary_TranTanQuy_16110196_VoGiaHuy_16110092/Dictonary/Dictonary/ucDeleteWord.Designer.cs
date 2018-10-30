@@ -56,6 +56,7 @@
             this.cbDelete.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.cbDelete.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cbDelete.DropDownHeight = 300;
+            this.cbDelete.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDelete.DropDownWidth = 132;
             this.cbDelete.Font = new System.Drawing.Font("Arial", 20F);
             this.cbDelete.FormattingEnabled = true;

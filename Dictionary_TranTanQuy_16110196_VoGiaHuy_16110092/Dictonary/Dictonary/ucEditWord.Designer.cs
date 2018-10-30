@@ -87,6 +87,7 @@
             // cbEdit
             // 
             this.cbEdit.DropDownHeight = 300;
+            this.cbEdit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbEdit.DropDownWidth = 132;
             this.cbEdit.Font = new System.Drawing.Font("Arial", 20F);
             this.cbEdit.FormattingEnabled = true;
