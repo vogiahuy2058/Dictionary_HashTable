@@ -86,8 +86,11 @@
             // 
             // cbEdit
             // 
+            this.cbEdit.DropDownHeight = 300;
+            this.cbEdit.DropDownWidth = 132;
             this.cbEdit.Font = new System.Drawing.Font("Arial", 20F);
             this.cbEdit.FormattingEnabled = true;
+            this.cbEdit.IntegralHeight = false;
             this.cbEdit.Location = new System.Drawing.Point(282, 140);
             this.cbEdit.Name = "cbEdit";
             this.cbEdit.Size = new System.Drawing.Size(374, 40);
@@ -145,6 +148,7 @@
             this.btnOK.Size = new System.Drawing.Size(102, 42);
             this.btnOK.TabIndex = 43;
             this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             this.btnOK.MouseEnter += new System.EventHandler(this.btnOK_MouseEnter);
             this.btnOK.MouseLeave += new System.EventHandler(this.btnOK_MouseLeave);
             // 

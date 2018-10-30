@@ -104,6 +104,8 @@ namespace Dictonary
         }
         private void btnOK_Click(object sender, EventArgs e)
         {
+            BB = new BangBam();
+            LoadDataFile();
             string s1 = txtWord.Text;
             string s2 = txtMeaning.Text;
 
@@ -126,15 +128,20 @@ namespace Dictonary
                         {
                             sw.WriteLine(s);
                         }
+                        sw.Close();
                     }
+                    
                     BangBam BB;
                     BB = new BangBam();
                     LoadDataFile();
                    
                     MessageBox.Show("This word has been added", "Congratulation", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
+                    Word wd = new Word(s1, s2);
+                    BB.Add(wd);
                     txtWord.ResetText();
                     txtMeaning.ResetText();
+                    file.Close();
                 }
             }
             catch (Exception exception)

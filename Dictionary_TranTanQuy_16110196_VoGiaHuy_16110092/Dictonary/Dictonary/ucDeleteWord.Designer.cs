@@ -53,12 +53,19 @@
             // 
             // cbDelete
             // 
+            this.cbDelete.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbDelete.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cbDelete.DropDownHeight = 300;
+            this.cbDelete.DropDownWidth = 132;
             this.cbDelete.Font = new System.Drawing.Font("Arial", 20F);
             this.cbDelete.FormattingEnabled = true;
+            this.cbDelete.IntegralHeight = false;
             this.cbDelete.Location = new System.Drawing.Point(273, 133);
             this.cbDelete.Name = "cbDelete";
             this.cbDelete.Size = new System.Drawing.Size(374, 40);
             this.cbDelete.TabIndex = 44;
+            this.cbDelete.SelectedIndexChanged += new System.EventHandler(this.cbDelete_SelectedIndexChanged);
+            this.cbDelete.Click += new System.EventHandler(this.cbDelete_Click);
             // 
             // lblChoose
             // 
@@ -91,6 +98,7 @@
             this.txtMeaning.Name = "txtMeaning";
             this.txtMeaning.Size = new System.Drawing.Size(374, 38);
             this.txtMeaning.TabIndex = 46;
+            this.txtMeaning.TextChanged += new System.EventHandler(this.txtMeaning_TextChanged);
             // 
             // lblOr
             // 
@@ -136,6 +144,7 @@
             this.btnOK.Size = new System.Drawing.Size(102, 42);
             this.btnOK.TabIndex = 48;
             this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             this.btnOK.MouseEnter += new System.EventHandler(this.btnOK_MouseEnter);
             this.btnOK.MouseLeave += new System.EventHandler(this.btnOK_MouseLeave);
             // 
