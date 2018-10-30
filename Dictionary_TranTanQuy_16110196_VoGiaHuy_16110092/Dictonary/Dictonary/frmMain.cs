@@ -196,7 +196,7 @@ namespace Dictonary
             ucAdd.Visible = false;
             ucEdit.Visible = false;
             ucSearch.Visible = false;
-            
+            ucDelete.reset();
         }
         //start location 65,46 ; size 683,444
         private void btnInfo_Click(object sender, EventArgs e)

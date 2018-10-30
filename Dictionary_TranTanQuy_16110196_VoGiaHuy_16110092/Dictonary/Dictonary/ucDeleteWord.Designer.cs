@@ -65,7 +65,6 @@
             this.cbDelete.Size = new System.Drawing.Size(374, 40);
             this.cbDelete.TabIndex = 44;
             this.cbDelete.SelectedIndexChanged += new System.EventHandler(this.cbDelete_SelectedIndexChanged);
-            this.cbDelete.Click += new System.EventHandler(this.cbDelete_Click);
             // 
             // lblChoose
             // 
@@ -125,6 +124,7 @@
             this.btnCancel.Size = new System.Drawing.Size(102, 42);
             this.btnCancel.TabIndex = 49;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             this.btnCancel.MouseEnter += new System.EventHandler(this.btnCancel_MouseEnter);
             this.btnCancel.MouseLeave += new System.EventHandler(this.btnCancel_MouseLeave);
             // 

@@ -74,7 +74,7 @@ namespace Dictonary
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            
+            BB = new BangBam();
             LoadDataFile();
             string s1 = txtWord.Text;
             try
@@ -88,14 +88,14 @@ namespace Dictonary
                 }
                 else
                 {
-                    lblWordHere.Text = "This word doesn't exist";
+                    lblWordHere.Text = "This word doesn't exist!";
                     lblMeaningHere.Text = "Tu khong ton tai";
                 }
 
             }
             catch (Exception exception)
             {
-                MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(exception.Message, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

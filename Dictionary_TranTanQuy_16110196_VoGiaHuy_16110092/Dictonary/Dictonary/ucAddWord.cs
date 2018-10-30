@@ -112,10 +112,10 @@ namespace Dictonary
             try
             {
                 if (s1 == "" || s2 == "")
-                    throw new Exception("You have to fill enough word");
+                    throw new Exception("Please type something!");
                 bool check = BB.Search_Check(s1);
                 if (check == true)
-                    MessageBox.Show("This word has been in this Dictionary", "Warning", MessageBoxButtons.OK,
+                    MessageBox.Show("This word existed!", "Warning", MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                 else
                 {
@@ -135,7 +135,7 @@ namespace Dictonary
                     BB = new BangBam();
                     LoadDataFile();
                    
-                    MessageBox.Show("This word has been added", "Congratulation", MessageBoxButtons.OK,
+                    MessageBox.Show("Added succesfully!", "Congratulations", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     Word wd = new Word(s1, s2);
                     BB.Add(wd);

@@ -149,7 +149,7 @@ namespace Dictonary
             string s4 = s1 + "@" + BB.Search_Lookup(s1);
             string tempFile = Path.GetTempFileName();
             if (s1 == "ccccc" || s2 == "aaaaa" || s3 == "bbbbb")
-                MessageBox.Show("You have to fill enough word", "Error", MessageBoxButtons.OK,
+                MessageBox.Show("Please type something!", "Error", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);
             else
             {
@@ -157,7 +157,7 @@ namespace Dictonary
                 {
                     bool check = BB.Search_Check(s1);
                     if (check == false)
-                        MessageBox.Show("This word has not been in this Dictionary", "Warning", MessageBoxButtons.OK,
+                        MessageBox.Show("This word doesn't exist", "Warning", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                     else
                     {
@@ -188,7 +188,7 @@ namespace Dictonary
                             sw1.Close();
                         }
                         file.Close();
-                        MessageBox.Show("This word has been edit", "Congratulation", MessageBoxButtons.OK,
+                        MessageBox.Show("Edited succesfully!", "Congratulations", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         cbEdit.ResetText();
                         txtNewWord.ResetText();

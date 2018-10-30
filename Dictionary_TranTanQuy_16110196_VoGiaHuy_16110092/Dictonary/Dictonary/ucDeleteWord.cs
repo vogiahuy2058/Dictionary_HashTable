@@ -178,7 +178,7 @@ namespace Dictonary
 
                 if (s1 == "zzzzz")
                 {
-                    MessageBox.Show("you have to fill enough word", "Error", MessageBoxButtons.OK,
+                    MessageBox.Show("Please type or choose something!", "Error", MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
                 }
                 else
@@ -189,7 +189,7 @@ namespace Dictonary
 
                         bool check = BB.Search_Check(s1);
                         if (check == false)
-                            MessageBox.Show("This word has not been in this Dictionary", "Warning", MessageBoxButtons.OK,
+                            MessageBox.Show("This word doesn't exist!", "Warning", MessageBoxButtons.OK,
                                 MessageBoxIcon.Warning);
                         else
                         {
@@ -209,7 +209,7 @@ namespace Dictonary
                             File.Delete(@"E:\Words\input.txt");
                             File.Move(tempFile, @"E:\Words\input.txt");
 
-                            MessageBox.Show("This word has been delete", "Congratulation", MessageBoxButtons.OK,
+                            MessageBox.Show("Deleted succesfully!", "Congratulations", MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);
                             BB.RemoveWord(s1);
                             cbDelete.ResetText();
@@ -237,7 +237,7 @@ namespace Dictonary
                 {
                     bool check = BB.Search_Check(s3);
                     if (check == false)
-                        MessageBox.Show("This word has not been in this Dictionary", "Warning", MessageBoxButtons.OK,
+                        MessageBox.Show("This word doesn't exist!", "Warning", MessageBoxButtons.OK,
                             MessageBoxIcon.Warning);
                     else
                     {
@@ -257,7 +257,7 @@ namespace Dictonary
                         File.Delete(@"E:\Words\input.txt");
                         File.Move(tempFile, @"E:\Words\input.txt");
 
-                        MessageBox.Show("This word has been delete", "Congratulation", MessageBoxButtons.OK,
+                        MessageBox.Show("Deleted succesfully!", "Congratulations", MessageBoxButtons.OK,
                             MessageBoxIcon.Information);
                         BB.RemoveWord(s3);
                         cbDelete.ResetText();
@@ -273,12 +273,20 @@ namespace Dictonary
             cbDelete.Items.Clear();
             AddComboBox(BB, cbDelete);
         }
-
-        private void cbDelete_Click(object sender, EventArgs e)
+        public void reset()
         {
+            cbDelete.Items.Clear();
             LoadDataFile();
-
             AddComboBox(BB, cbDelete);
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            cbDelete.Enabled = true;
+            txtMeaning.Enabled = true;
+            lblOr.Enabled = true;
+            lblType.Enabled = true;
+            lblChoose.Enabled = true;
         }
     }
 }

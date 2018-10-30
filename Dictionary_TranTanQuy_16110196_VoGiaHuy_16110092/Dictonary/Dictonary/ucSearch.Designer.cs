@@ -32,15 +32,15 @@
             this.lblWord = new System.Windows.Forms.Label();
             this.txtWord = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnAudio = new System.Windows.Forms.Button();
             this.lblWordHere = new System.Windows.Forms.Label();
             this.lblW = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnAudioM = new System.Windows.Forms.Button();
             this.lblMeaningHere = new System.Windows.Forms.Label();
             this.lblM = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
-            this.btnAudioM = new System.Windows.Forms.Button();
-            this.btnAudio = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -99,7 +99,6 @@
             "year",
             "zoo",
             "information"});
-            this.txtWord.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.txtWord.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txtWord.Font = new System.Drawing.Font("Arial", 20F);
             this.txtWord.Location = new System.Drawing.Point(238, 96);
@@ -118,6 +117,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(291, 237);
             this.panel1.TabIndex = 41;
+            // 
+            // btnAudio
+            // 
+            this.btnAudio.BackColor = System.Drawing.Color.LightGray;
+            this.btnAudio.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnAudio.FlatAppearance.BorderSize = 0;
+            this.btnAudio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
+            this.btnAudio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btnAudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAudio.Image = global::Dictonary.Properties.Resources.audio_purple;
+            this.btnAudio.Location = new System.Drawing.Point(247, 0);
+            this.btnAudio.Name = "btnAudio";
+            this.btnAudio.Size = new System.Drawing.Size(44, 38);
+            this.btnAudio.TabIndex = 45;
+            this.btnAudio.UseVisualStyleBackColor = false;
+            this.btnAudio.MouseEnter += new System.EventHandler(this.btnAudio_MouseEnter);
+            this.btnAudio.MouseLeave += new System.EventHandler(this.btnAudio_MouseLeave);
             // 
             // lblWordHere
             // 
@@ -152,6 +168,23 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(291, 237);
             this.panel2.TabIndex = 42;
+            // 
+            // btnAudioM
+            // 
+            this.btnAudioM.BackColor = System.Drawing.Color.LightGray;
+            this.btnAudioM.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnAudioM.FlatAppearance.BorderSize = 0;
+            this.btnAudioM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
+            this.btnAudioM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btnAudioM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAudioM.Image = global::Dictonary.Properties.Resources.audio_purple;
+            this.btnAudioM.Location = new System.Drawing.Point(247, 0);
+            this.btnAudioM.Name = "btnAudioM";
+            this.btnAudioM.Size = new System.Drawing.Size(44, 38);
+            this.btnAudioM.TabIndex = 46;
+            this.btnAudioM.UseVisualStyleBackColor = false;
+            this.btnAudioM.MouseEnter += new System.EventHandler(this.btnAudioM_MouseEnter);
+            this.btnAudioM.MouseLeave += new System.EventHandler(this.btnAudioM_MouseLeave);
             // 
             // lblMeaningHere
             // 
@@ -212,40 +245,6 @@
             this.btnFind.TabIndex = 44;
             this.btnFind.UseVisualStyleBackColor = false;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
-            // 
-            // btnAudioM
-            // 
-            this.btnAudioM.BackColor = System.Drawing.Color.LightGray;
-            this.btnAudioM.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.btnAudioM.FlatAppearance.BorderSize = 0;
-            this.btnAudioM.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
-            this.btnAudioM.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btnAudioM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAudioM.Image = global::Dictonary.Properties.Resources.audio_purple;
-            this.btnAudioM.Location = new System.Drawing.Point(247, 0);
-            this.btnAudioM.Name = "btnAudioM";
-            this.btnAudioM.Size = new System.Drawing.Size(44, 38);
-            this.btnAudioM.TabIndex = 46;
-            this.btnAudioM.UseVisualStyleBackColor = false;
-            this.btnAudioM.MouseEnter += new System.EventHandler(this.btnAudioM_MouseEnter);
-            this.btnAudioM.MouseLeave += new System.EventHandler(this.btnAudioM_MouseLeave);
-            // 
-            // btnAudio
-            // 
-            this.btnAudio.BackColor = System.Drawing.Color.LightGray;
-            this.btnAudio.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
-            this.btnAudio.FlatAppearance.BorderSize = 0;
-            this.btnAudio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
-            this.btnAudio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
-            this.btnAudio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAudio.Image = global::Dictonary.Properties.Resources.audio_purple;
-            this.btnAudio.Location = new System.Drawing.Point(247, 0);
-            this.btnAudio.Name = "btnAudio";
-            this.btnAudio.Size = new System.Drawing.Size(44, 38);
-            this.btnAudio.TabIndex = 45;
-            this.btnAudio.UseVisualStyleBackColor = false;
-            this.btnAudio.MouseEnter += new System.EventHandler(this.btnAudio_MouseEnter);
-            this.btnAudio.MouseLeave += new System.EventHandler(this.btnAudio_MouseLeave);
             // 
             // ucSearch
             // 
