@@ -63,6 +63,7 @@ namespace Dictonary
 
         }
         #endregion
+        #region Edit (VoGiaHuy)
         int TotalLines(string filePath)
         {
             using (StreamReader r = new StreamReader(filePath))
@@ -208,5 +209,6 @@ namespace Dictonary
                 }
             }
         }
+        #endregion
     }
 }

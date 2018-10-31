@@ -132,6 +132,7 @@
             this.btnAudio.Size = new System.Drawing.Size(44, 38);
             this.btnAudio.TabIndex = 45;
             this.btnAudio.UseVisualStyleBackColor = false;
+            this.btnAudio.Click += new System.EventHandler(this.btnAudio_Click);
             this.btnAudio.MouseEnter += new System.EventHandler(this.btnAudio_MouseEnter);
             this.btnAudio.MouseLeave += new System.EventHandler(this.btnAudio_MouseLeave);
             // 
@@ -183,6 +184,7 @@
             this.btnAudioM.Size = new System.Drawing.Size(44, 38);
             this.btnAudioM.TabIndex = 46;
             this.btnAudioM.UseVisualStyleBackColor = false;
+            this.btnAudioM.Click += new System.EventHandler(this.btnAudioM_Click);
             this.btnAudioM.MouseEnter += new System.EventHandler(this.btnAudioM_MouseEnter);
             this.btnAudioM.MouseLeave += new System.EventHandler(this.btnAudioM_MouseLeave);
             // 

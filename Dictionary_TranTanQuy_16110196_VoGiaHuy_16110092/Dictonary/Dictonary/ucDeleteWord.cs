@@ -66,6 +66,7 @@ namespace Dictonary
 
         }
         #endregion
+        #region delete (VoGiaHuy)
         int TotalLines(string filePath)
         {
             using (StreamReader r = new StreamReader(filePath))
@@ -289,6 +290,6 @@ namespace Dictonary
             lblChoose.Enabled = true;
         }
 
-        
+        #endregion
     }
 }

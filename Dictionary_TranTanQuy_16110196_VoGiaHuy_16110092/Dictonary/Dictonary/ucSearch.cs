@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Speech.Synthesis;
+using System.Speech.Recognition;
 //Trần Tấn Quý
 namespace Dictonary
 {
@@ -19,6 +21,8 @@ namespace Dictonary
             InitializeComponent();
             BB= new BangBam();
             LoadDataFile();
+            Loading();
+            SpeakWord();
         }
         #region Load Data 
         
@@ -143,6 +147,62 @@ namespace Dictonary
             this.btnAudioM.Image = ((System.Drawing.Image)(Properties.Resources.audio_purple));
 
         }
+        #endregion
+        #region speakword
+        private void wbEn_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            isLoading1 = false;
+            Loading();
+        }
+
+        private void wbVN_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            isLoading2 = false;
+            Loading();
+        }
+        public void Loading()
+        {
+            this.Enabled = !(isLoading1 && isLoading2);
+        }
+        public void SpeakWord()
+        {
+            WebBrowser wbVN = new WebBrowser();
+            wbVN.Width = 0;
+            wbVN.Height = 0;
+            wbVN.Visible = false;
+            wbVN.ScriptErrorsSuppressed = true;
+            wbVN.Navigate(Link.VietNamLink);
+            wbVN.DocumentCompleted += wbVN_DocumentCompleted;
+            this.Controls.Add(wbVN);
+            VietNamese = new SpeakText(wbVN);
+        }
+        private SpeakText VietNamese;
+        public bool isLoading1 = true;
+        public bool isLoading2 = true;
+        SpeechSynthesizer sSynth = new SpeechSynthesizer();
+        PromptBuilder pBuilder = new PromptBuilder();
+        SpeechRecognitionEngine sRecognize = new SpeechRecognitionEngine();
+        private void btnAudio_Click(object sender, EventArgs e)
+        {
+            pBuilder.ClearContent();
+            pBuilder.AppendText(lblWordHere.Text);
+            sSynth.Speak(pBuilder);
+        }
+
+        private void btnAudioM_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (lblMeaningHere.Text == null)
+                    throw new Exception("Dictionary can not speak");
+                VietNamese.Spreak(lblMeaningHere.Text);
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show(exception.Message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+        #endregion
     }
-    #endregion
+
 }
