@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWelcome));
             this.btnClose = new System.Windows.Forms.Button();
             this.btnStart = new System.Windows.Forms.Button();
             this.lblWelcome = new System.Windows.Forms.Label();
@@ -101,6 +102,7 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 8.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmWelcome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmWelcome";

@@ -48,7 +48,10 @@ namespace Dictonary
         
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Form frm = new frmQuit();//hiện frm thông báo
+            this.AddOwnedForm(frm);
+            this.Hide();
+            frm.ShowDialog();
         }
 
         private void btnSlideMenu_Click(object sender, EventArgs e)
@@ -241,8 +244,16 @@ namespace Dictonary
             ucEdit.Visible = false;
         }
 
+
+
         #endregion
 
-        
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmNoti();//hiện frm Đăng xuất
+            this.AddOwnedForm(frm);
+            this.Hide();
+            frm.ShowDialog();
+        }
     }
 }

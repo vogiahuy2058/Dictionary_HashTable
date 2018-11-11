@@ -61,6 +61,18 @@
     <Compile Include="frmMain.Designer.cs">
       <DependentUpon>frmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmNoti.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNoti.Designer.cs">
+      <DependentUpon>frmNoti.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmQuit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmQuit.Designer.cs">
+      <DependentUpon>frmQuit.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmWelcome.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,6 +114,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNoti.resx">
+      <DependentUpon>frmNoti.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmQuit.resx">
+      <DependentUpon>frmQuit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmWelcome.resx">
       <DependentUpon>frmWelcome.cs</DependentUpon>
@@ -200,6 +218,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\audo white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-exit-26.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

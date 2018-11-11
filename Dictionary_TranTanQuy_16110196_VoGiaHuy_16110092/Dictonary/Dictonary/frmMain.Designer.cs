@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btnClose = new System.Windows.Forms.Button();
             this.btnInfo = new System.Windows.Forms.Button();
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
@@ -76,6 +78,7 @@
             // pnlMenu
             // 
             this.pnlMenu.BackColor = System.Drawing.Color.Black;
+            this.pnlMenu.Controls.Add(this.btnLogOut);
             this.pnlMenu.Controls.Add(this.btnSearch);
             this.pnlMenu.Controls.Add(this.btnDelete);
             this.pnlMenu.Controls.Add(this.btnEdit);
@@ -87,6 +90,25 @@
             this.pnlMenu.TabIndex = 15;
             this.pnlMenu.Leave += new System.EventHandler(this.pnlMenu_Leave);
             // 
+            // btnLogOut
+            // 
+            this.btnLogOut.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogOut.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnLogOut.FlatAppearance.BorderSize = 0;
+            this.btnLogOut.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
+            this.btnLogOut.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btnLogOut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLogOut.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.btnLogOut.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnLogOut.Image = global::Dictonary.Properties.Resources.icons8_exit_26;
+            this.btnLogOut.Location = new System.Drawing.Point(-258, 453);
+            this.btnLogOut.Name = "btnLogOut";
+            this.btnLogOut.Size = new System.Drawing.Size(559, 55);
+            this.btnLogOut.TabIndex = 6;
+            this.btnLogOut.Text = "                              Log out";
+            this.btnLogOut.UseVisualStyleBackColor = false;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
+            // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Transparent;
@@ -97,7 +119,7 @@
             this.btnSearch.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnSearch.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnSearch.Image = global::Dictonary.Properties.Resources.Find_24;
-            this.btnSearch.Location = new System.Drawing.Point(-258, 172);
+            this.btnSearch.Location = new System.Drawing.Point(-258, 233);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(559, 55);
             this.btnSearch.TabIndex = 5;
@@ -115,7 +137,7 @@
             this.btnDelete.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnDelete.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnDelete.Image = global::Dictonary.Properties.Resources.delete_24;
-            this.btnDelete.Location = new System.Drawing.Point(-258, 337);
+            this.btnDelete.Location = new System.Drawing.Point(-258, 398);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(559, 55);
             this.btnDelete.TabIndex = 4;
@@ -133,7 +155,7 @@
             this.btnEdit.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnEdit.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnEdit.Image = global::Dictonary.Properties.Resources.edit_24;
-            this.btnEdit.Location = new System.Drawing.Point(-258, 282);
+            this.btnEdit.Location = new System.Drawing.Point(-258, 343);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(559, 55);
             this.btnEdit.TabIndex = 3;
@@ -151,7 +173,7 @@
             this.btnAdd.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btnAdd.Image = global::Dictonary.Properties.Resources.add_24_white;
-            this.btnAdd.Location = new System.Drawing.Point(-258, 227);
+            this.btnAdd.Location = new System.Drawing.Point(-258, 288);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(559, 55);
             this.btnAdd.TabIndex = 2;
@@ -192,6 +214,7 @@
             this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmMain";
@@ -212,5 +235,6 @@
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Button btnLogOut;
     }
 }
