@@ -31,3 +31,5 @@ C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGi
 C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.ucSearch.resources
 D:\CTDL\FinalProject\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.frmNoti.resources
 D:\CTDL\FinalProject\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.frmQuit.resources
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.frmNoti.resources
+C:\Users\HUY-PC\Desktop\Dictionary_HashTable\Dictionary_TranTanQuy_16110196_VoGiaHuy_16110092\Dictonary\Dictonary\obj\Debug\Dictonary.frmQuit.resources

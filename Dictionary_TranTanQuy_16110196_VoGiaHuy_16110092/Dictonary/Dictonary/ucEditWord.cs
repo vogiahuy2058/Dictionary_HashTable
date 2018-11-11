@@ -130,6 +130,7 @@ namespace Dictonary
         public void reset()
         {
             cbEdit.Items.Clear();
+            BB = new BangBam();
             LoadDataFile();
             AddComboBox(BB, cbEdit);
         }

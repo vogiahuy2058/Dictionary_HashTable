@@ -277,6 +277,7 @@ namespace Dictonary
         public void reset()
         {
             cbDelete.Items.Clear();
+            BB = new BangBam();
             LoadDataFile();
             AddComboBox(BB, cbDelete);
         }
@@ -289,7 +290,6 @@ namespace Dictonary
             lblType.Enabled = true;
             lblChoose.Enabled = true;
         }
-
         #endregion
     }
 }
