@@ -103,6 +103,7 @@
             this.btnCancel.Size = new System.Drawing.Size(102, 42);
             this.btnCancel.TabIndex = 42;
             this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             this.btnCancel.MouseEnter += new System.EventHandler(this.btnCancel_MouseEnter);
             this.btnCancel.MouseLeave += new System.EventHandler(this.btnCancel_MouseLeave);
             // 

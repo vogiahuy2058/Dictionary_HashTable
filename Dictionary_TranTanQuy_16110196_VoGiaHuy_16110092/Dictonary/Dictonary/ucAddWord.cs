@@ -60,6 +60,12 @@ namespace Dictonary
             this.Hide();
 
         }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtMeaning.ResetText();
+            txtWord.ResetText();
+            txtWord.Focus();
+        }
         #endregion
         #region Võ Gia Huy
         int TotalLines(string filePath)
@@ -143,12 +149,14 @@ namespace Dictonary
                     txtMeaning.ResetText();
                     file.Close();
                 }
+                txtWord.Focus();
             }
             catch (Exception exception)
             {
                 MessageBox.Show(exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         #endregion
 

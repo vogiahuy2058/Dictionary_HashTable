@@ -210,7 +210,14 @@ namespace Dictonary
                 }
             }
         }
-        
+
         #endregion
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            txtMeaning.ResetText();
+            txtNewWord.ResetText();
+            //cbEdit.ResetText();
+        }
     }
 }
