@@ -141,7 +141,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(559, 55);
             this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "                                    Edit a word";
+            this.btnDelete.Text = "                                        Delete a word";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
@@ -177,7 +177,7 @@
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(559, 55);
             this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "                                     Add a word";
+            this.btnAdd.Text = "                                    Add a word";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
