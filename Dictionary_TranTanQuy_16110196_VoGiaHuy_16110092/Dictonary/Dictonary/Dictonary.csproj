@@ -222,6 +222,12 @@
   <ItemGroup>
     <None Include="Resources\icons8-exit-26.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history 24 purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\history 24 white.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

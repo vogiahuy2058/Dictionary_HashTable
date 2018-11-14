@@ -130,7 +130,7 @@ namespace Dictonary
             {
                 if (check == false)
                 {
-                    throw new Exception("This word is not had in HashTable!!!");
+                    throw new Exception("This word doesn't exist in HashTable");
                 }
                 Node p = new Node();
                 p = Table[hash].Head;

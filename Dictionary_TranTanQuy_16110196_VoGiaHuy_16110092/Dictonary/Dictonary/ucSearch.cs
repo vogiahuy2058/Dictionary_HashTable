@@ -23,6 +23,7 @@ namespace Dictonary
             LoadDataFile();
             Loading();
             SpeakWord();
+            pnlHistory.Visible = false;
         }
         #region Load Data 
         
@@ -89,9 +90,11 @@ namespace Dictonary
                 {
                     lblWordHere.Text = s1;
                     lblMeaningHere.Text = BB.Search_Lookup(s1);
+                    cbHistoryWord.Items.Add(s1);
                 }
                 else
                 {
+                    cbHistoryWord.Items.Add(s1);
                     lblWordHere.Text = "This word doesn't exist!";
                     lblMeaningHere.Text = "Tu khong ton tai";
                 }
@@ -203,6 +206,30 @@ namespace Dictonary
             }
         }
         #endregion
+
+        private void btnHistory_MouseEnter(object sender, EventArgs e)
+        {
+            this.btnHistory.Image = ((System.Drawing.Image)(Properties.Resources.history_24_white));
+
+        }
+
+        private void btnHistory_MouseLeave(object sender, EventArgs e)
+        {
+            this.btnHistory.Image = ((System.Drawing.Image)(Properties.Resources.history_24_purple));
+
+        }
+
+        private void btnHistory_Click(object sender, EventArgs e)
+        {
+            if(pnlHistory.Visible ==true)
+            {
+                pnlHistory.Visible = false;
+            }
+            else
+            {
+                pnlHistory.Visible = true;
+            }
+        }
     }
 
 }

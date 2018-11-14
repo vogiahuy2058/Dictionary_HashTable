@@ -193,6 +193,26 @@ namespace Dictonary.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap history_24_purple {
+            get {
+                object obj = ResourceManager.GetObject("history 24 purple", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap history_24_white {
+            get {
+                object obj = ResourceManager.GetObject("history 24 white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_about_filled_24 {
             get {
                 object obj = ResourceManager.GetObject("icons8-about-filled-24", resourceCulture);

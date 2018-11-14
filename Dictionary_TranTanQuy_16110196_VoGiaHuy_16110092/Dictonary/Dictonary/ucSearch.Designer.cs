@@ -39,10 +39,16 @@
             this.btnAudioM = new System.Windows.Forms.Button();
             this.lblMeaningHere = new System.Windows.Forms.Label();
             this.lblM = new System.Windows.Forms.Label();
+            this.btnHistory = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnFind = new System.Windows.Forms.Button();
+            this.pnlHistory = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbHistoryWord = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.pnlHistory.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblEdit
@@ -211,6 +217,26 @@
             this.lblM.TabIndex = 44;
             this.lblM.Text = "Meaning:";
             // 
+            // btnHistory
+            // 
+            this.btnHistory.BackColor = System.Drawing.Color.Transparent;
+            this.btnHistory.FlatAppearance.BorderColor = System.Drawing.Color.Purple;
+            this.btnHistory.FlatAppearance.BorderSize = 0;
+            this.btnHistory.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
+            this.btnHistory.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Purple;
+            this.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistory.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.btnHistory.ForeColor = System.Drawing.Color.Purple;
+            this.btnHistory.Image = global::Dictonary.Properties.Resources.history_24_purple;
+            this.btnHistory.Location = new System.Drawing.Point(0, 0);
+            this.btnHistory.Name = "btnHistory";
+            this.btnHistory.Size = new System.Drawing.Size(56, 38);
+            this.btnHistory.TabIndex = 46;
+            this.btnHistory.UseVisualStyleBackColor = false;
+            this.btnHistory.Click += new System.EventHandler(this.btnHistory_Click);
+            this.btnHistory.MouseEnter += new System.EventHandler(this.btnHistory_MouseEnter);
+            this.btnHistory.MouseLeave += new System.EventHandler(this.btnHistory_MouseLeave);
+            // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
@@ -248,11 +274,58 @@
             this.btnFind.UseVisualStyleBackColor = false;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
+            // pnlHistory
+            // 
+            this.pnlHistory.BackColor = System.Drawing.Color.LightPink;
+            this.pnlHistory.Controls.Add(this.label2);
+            this.pnlHistory.Controls.Add(this.cbHistoryWord);
+            this.pnlHistory.Controls.Add(this.label1);
+            this.pnlHistory.Location = new System.Drawing.Point(171, 62);
+            this.pnlHistory.Name = "pnlHistory";
+            this.pnlHistory.Size = new System.Drawing.Size(355, 331);
+            this.pnlHistory.TabIndex = 47;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Arial", 20F);
+            this.label2.ForeColor = System.Drawing.Color.Indigo;
+            this.label2.Location = new System.Drawing.Point(61, 75);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 32);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Word:";
+            // 
+            // cbHistoryWord
+            // 
+            this.cbHistoryWord.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHistoryWord.Font = new System.Drawing.Font("Arial", 16F);
+            this.cbHistoryWord.FormattingEnabled = true;
+            this.cbHistoryWord.Location = new System.Drawing.Point(67, 116);
+            this.cbHistoryWord.Name = "cbHistoryWord";
+            this.cbHistoryWord.Size = new System.Drawing.Size(221, 32);
+            this.cbHistoryWord.TabIndex = 45;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Arial", 20F);
+            this.label1.ForeColor = System.Drawing.Color.Navy;
+            this.label1.Location = new System.Drawing.Point(51, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(256, 32);
+            this.label1.TabIndex = 44;
+            this.label1.Text = "SEARCH HISTORY";
+            // 
             // ucSearch
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
+            this.Controls.Add(this.pnlHistory);
+            this.Controls.Add(this.btnHistory);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnFind);
             this.Controls.Add(this.panel2);
@@ -267,6 +340,8 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.pnlHistory.ResumeLayout(false);
+            this.pnlHistory.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -287,5 +362,10 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAudio;
         private System.Windows.Forms.Button btnAudioM;
+        private System.Windows.Forms.Button btnHistory;
+        private System.Windows.Forms.Panel pnlHistory;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox cbHistoryWord;
+        private System.Windows.Forms.Label label2;
     }
 }
